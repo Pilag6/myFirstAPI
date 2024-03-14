@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 const API_KEY = process.env.API_KEY;
 const PORT = process.env.PORT;
-const environment = process.env.NODE_ENV;
+// const environment = process.env.NODE_ENV;
 
 // const environment = process.argv[2]; // "prod(production)"
 app.use(cors());
@@ -27,10 +27,4 @@ app.get("/weather/:location", async (req, res) => {
 	// res.json(data);
 })
 
-app.listen(PORT, () => {
-    if (environment === "development") {
-        console.log(`server is running on http://localhost:${PORT}`);
-    } else {
-        console.log("server running on production");
-    }
-});
+app.listen(PORT);
