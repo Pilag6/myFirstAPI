@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "server": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "node --env-file=.env server.js"
   },
   "keywords": [],
   "author": "",
